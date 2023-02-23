@@ -5,8 +5,18 @@ from audiorecorder import audiorecorder
 import magic
 import os
 import re
-import pyttsx3
 
+# Define a function to generate TTS voices using the Web Speech API
+def generate_voice(text, voice):
+    # Define the JavaScript code to generate the voice
+    js_code = f"""
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance("{text}");
+        utterance.voice = speechSynthesis.getVoices().filter((v) => v.name === "{voice}")[0];
+        synth.speak(utterance);
+    """
+    # Use the components module to embed the JavaScript code in the web page
+    st.components.v1.html(f"<script>{js_code}</script>", height=0)
 
 
 def get_audio_record_format(orgfile):
@@ -52,14 +62,7 @@ def init_load_setups():
 # main voice chat app 
 def app():
     # Put expensive initialize computation here
-    st.title("Voice Assistant with chatGPT")
-
-    #setup tts engine
-    tts = pyttsx3.init()
-    tts.setProperty("rate", 175)
-    #tts.setProperty("voice", "english")
-    tts.setProperty('voice', "com.apple.speech.synthesis.voice.Victoria")   #changing index, changes voices. 1 for female
-
+    st.title("Voice Assistant with chatGPT3.5")
 
     # get initial setup
     asr, chatgpt = init_load_setups()
@@ -95,22 +98,8 @@ def app():
             spokenResponse = re.sub(r'\s+', ' ', response)
             spokenResponse = spokenResponse.lstrip().rstrip()
             #Speak the input text
-            tts.say(spokenResponse)
-            tts.runAndWait()
-            # st.write("# Auto-playing Audio!")
-            # autoplay_audio("botvoice.wav")
-            #voices = ["Google UK English Female", "Google US English", "Microsoft David Desktop - English (United States)"]
-            #generate_voice(response, "Google US English")
-
+            generate_voice(spokenResponse, "Google US English")
 
 
 if __name__ == "__main__":
     app()
-
-
-
-# The if __name__ == "__main__" block is a common Python idiom that 
-# allows you to run the code in the main() function when you run 
-# the script directly (i.e. with python script.py) 
-# but not when you import the script as a module in another script.
-#
