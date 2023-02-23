@@ -1,0 +1,7 @@
+libtk8.6
+ffmpeg
+libsndfile1
+libportaudio2
+libmagic1
+espeak
+libespeak-dev
