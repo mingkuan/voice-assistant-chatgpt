@@ -6,8 +6,6 @@ You can click the "Push-To-Talk" button in the web app to ask ChatGPT about anyt
 
 This voice assistant can understand up-to **97 different languages**, not just English, [thanks to OpenAI's Whisper ASR model](https://github.com/openai/whisper). 
 
-![Screenshot of the Voice Assistant Web App](./VoiceAssistantchatGPT.png)
-
 **Note**:
 You need get your own OpenAI API key in order to let your web app to get response from the chatGPT API.
 
@@ -49,3 +47,6 @@ docker run -it -p 8501:8501  --env-file .env.secrete.txt voicebot-chatgpt
 ```
 And then open your browser with the URL at http://localhost:8501
 
+# Screenshot of the Voice Assistant of chatGPT
+
+![Screenshot of the Voice Assistant Web App](./VoiceAssistantchatGPT.png)
