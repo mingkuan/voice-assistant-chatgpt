@@ -6,8 +6,7 @@ You can click the "Push-To-Talk" button in the web app to ask ChatGPT about anyt
 
 This voice assistant can understand up-to **97 different languages**, not just English, [thanks to OpenAI's Whisper ASR model](https://github.com/openai/whisper). 
 
-
-[Add Picture here]
+![Screenshot of the Voice Assistant Web App](./VoiceAssistantchatGPT.png|width=200)
 
 **Note**:
 You need get your own OpenAI API key in order to let your web app to get response from the chatGPT API.
