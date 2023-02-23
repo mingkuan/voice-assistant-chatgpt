@@ -4,7 +4,8 @@ This is a ChatGPT voice assistant web app that understands 97 different spoken l
 
 You can click the "Push-To-Talk" button in the web app to ask ChatGPT about anything you are interested in many different languages. This web app will transcribe what you said and then send the request to OpenAI's chatGPT API to get the answer. And then it will then speak out chatGPT's answer using computer synthetic voice back to user.
 
-This code repo contains the sample code from the book [AI/ML Web App Development for Everyone: A 5-Day Guide for Non-Coders to Build Voice Assistant that Understands 97 languages](). The book is targeted for everyone including non-coders without technology background to be able to quickly develop an AI/ML web app in very short time.
+This repository includes sample code from the first book in the HOW-TO-DO-AI book series, ["AI/ML Web App Development for Everyone: A 5-Day Guide for Non-Coders to Build a Voice Assistant that Understands 97 Languages"](). The book is intended for everyone, including non-coders without a technology background, who want to develop an AI/ML web app quickly and easily.
+
 
 **Note**:
 You need get your own OpenAI API key in order to let the web app to get response from the chatGPT API.
