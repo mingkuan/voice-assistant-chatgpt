@@ -84,7 +84,7 @@ def app():
 
         st.markdown("<b>Chat History</b> ", unsafe_allow_html=True)
 
-        with st.spinner("Recognizing your voice commmand ..."):
+        with st.spinner("Recognizing your voice command ..."):
             asr_result = asr.transcribe( audioname + recordFormat )
             text = asr_result["text"]
             st.markdown("<b>You:</b> " + text, unsafe_allow_html=True)

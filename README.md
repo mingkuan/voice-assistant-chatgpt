@@ -1,9 +1,10 @@
-# ChatGPT Voice Assistant
+# ChatGPT Voice Assistant Understanding 97 Languages
 
-This is a ChatGPT voice assistant web app that understands 97 different spoken languages. It is backed by the [awesome open sourced Whisper ASR model](https://github.com/openai/whisper) and the chatGTP LLM, both provided by OpenAI. 
+This is a ChatGPT voice assistant web app that understands 97 different spoken languages. It is backed by the [awesome open sourced Whisper Automatic Speech Recogntion (ASR) model](https://github.com/openai/whisper) and the chatGTP Large Language Model (LLM), both provided by OpenAI. 
 
-You can click the "Push-To-Talk" button in the web app to ask ChatGPT about anything you are interested in 97 different spoken languages. This web app will transcribe what you said and then send the request to OpenAI's chatGPT API to get the answer. This web app will then speak out chatGPT's answer using computer synthetic voice back to you.
+You can click the "Push-To-Talk" button in the web app to ask ChatGPT about anything you are interested in many different languages. This web app will transcribe what you said and then send the request to OpenAI's chatGPT API to get the answer. And then it will then speak out chatGPT's answer using computer synthetic voice back to user.
 
+This code repo contains the sample code from the book [AI/ML Web App Development for Everyone: A 5-Day Guide for Non-Coders to Build Voice Assistant that Understands 97 languages](). The book is targeted for everyone including non-coders without technology background to be able to quickly develop an AI/ML web app in very short time.
 
 **Note**:
 You need get your own OpenAI API key in order to let the web app to get response from the chatGPT API.
@@ -32,14 +33,13 @@ streamlit run voicechat.py
 ```
 And then open your browser with the URL at http://localhost:8501
 
-
-## 2. From from docker container directly
+## 2. Run from docker container
 
 ```bash
 # Build the docker container
 docker build -t voicebot-chatgpt -f Dockerfile .
 
-# Wriet your own OpenAPI key into your secret file .env.secrete.txt
+# Save your own OpenAPI key into your secret file .env.secrete.txt
 
 # Run the docker container by feed in your API key as environment variable
 docker run -it -p 8501:8501  --env-file .env.secrete.txt voicebot-chatgpt

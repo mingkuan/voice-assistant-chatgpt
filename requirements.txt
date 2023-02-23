@@ -1,9 +1,9 @@
 streamlit==1.15.0
 openai==0.26.5
-numpy
-torch
-tqdm
-more-itertools
+numpy==1.23.5
+torch==1.13.1
+tqdm==4.64.1
+more-itertools==9.0.0
 transformers>=4.19.0
 ffmpeg-python==0.2.0
 git+https://github.com/openai/whisper.git
