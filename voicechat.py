@@ -62,7 +62,7 @@ def init_load_setups():
 # main voice chat app 
 def app():
     # Put expensive initialize computation here
-    st.title("Voice Assistant with chatGPT3.5")
+    st.title("Voice Assistant Version of  chatGPT")
 
     # get initial setup
     asr, chatgpt = init_load_setups()
