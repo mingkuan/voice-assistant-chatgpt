@@ -47,6 +47,6 @@ docker run -it -p 8501:8501  --env-file .env.secrete.txt voicebot-chatgpt
 ```
 And then open your browser with the URL at http://localhost:8501
 
-# Screenshot of the Voice Assistant of chatGPT
+## 3. Screenshot of the Voice Assistant of chatGPT
 
 ![Screenshot of the Voice Assistant Web App](./VoiceAssistantchatGPT.png)
