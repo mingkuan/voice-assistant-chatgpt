@@ -6,7 +6,7 @@ You can click the "Push-To-Talk" button in the web app to ask ChatGPT about anyt
 
 This voice assistant can understand up-to **97 different languages**, not just English, [thanks to OpenAI's Whisper ASR model](https://github.com/openai/whisper). 
 
-![Screenshot of the Voice Assistant Web App](./VoiceAssistantchatGPT.png|width=200)
+![Screenshot of the Voice Assistant Web App](./VoiceAssistantchatGPT.png)
 
 **Note**:
 You need get your own OpenAI API key in order to let your web app to get response from the chatGPT API.
@@ -28,7 +28,7 @@ git clone https://github.com/mingkuan/voice-assistant-chatgpt.git
 pip install -r requirements.txt
 
 #get your OpenAI API key from: https://platform.openai.com/account/api-keys 
-#feedin your own OpenAI API key in line#47 in the voicechat.py file.
+#feedin your own OpenAI API key in line#57 in the voicechat.py file.
 
 #start the web app
 streamlit run voicechat.py
