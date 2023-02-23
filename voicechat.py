@@ -62,7 +62,8 @@ def init_load_setups():
 # main voice chat app 
 def app():
     # Put expensive initialize computation here
-    st.title("chatGPT Voice Assistant that Understands 97 Spoken Languages")
+    st.title("ChatGPT Voice Assistant")
+    st.subheader("It understands 97 Spoken Languages!")
 
     # get initial setup
     asr, chatgpt = init_load_setups()

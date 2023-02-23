@@ -1,6 +1,6 @@
-# chatGPT Voice Assistant that Understands 97 Spoken Languages
+# ChatGPT Voice Assistant
 
-This is a voice assistant web app that understands 97 different spoken languages. It is backed by the [awesome open sourced Whisper ASR model](https://github.com/openai/whisper) and the chatGTP LLM, both provided by OpenAI. 
+This is a ChatGPT voice assistant web app that understands 97 different spoken languages. It is backed by the [awesome open sourced Whisper ASR model](https://github.com/openai/whisper) and the chatGTP LLM, both provided by OpenAI. 
 
 You can click the "Push-To-Talk" button in the web app to ask ChatGPT about anything you are interested in 97 different spoken languages. This web app will transcribe what you said and then send the request to OpenAI's chatGPT API to get the answer. This web app will then speak out chatGPT's answer using computer synthetic voice back to you.
 
