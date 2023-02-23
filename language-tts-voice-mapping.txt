@@ -1,0 +1,14 @@
+English, en, Google US English
+German, de, Google Deutsch
+Spanish, es, Google español
+French, fr, Google français
+Hindi, hi, Google हिन्दी
+Indonesian, id, Google Bahasa Indonesia
+Italian, it, Google italiano
+Japanese, ja, Google 日本語
+Korean, ko, Google 한국의
+Dutch, nl, Google Nederlands
+Polish, pl, Google polski
+Portuguese, pt, Google português do Brasil
+Russian, ru, Google русский
+Chinese, zh, Google 普通话（中国大陆）

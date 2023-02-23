@@ -4,8 +4,7 @@ WORKDIR /opt
 
 COPY voicechat.py /opt
 COPY requirements.txt /opt
-COPY asrmodel/ /opt/asrmodel/
-
+COPY language-tts-voice-mapping.txt /opt
 
 RUN apt-get update && apt-get install -y \
         ffmpeg \

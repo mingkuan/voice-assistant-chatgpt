@@ -56,7 +56,13 @@ def init_load_setups():
     # setup chatGPT instance
     openai.api_key = os.getenv("OPENAI_API_KEY").strip('"')
     conversation = Conversation(engine="text-davinci-003")
-    return asrmodel, conversation
+    # load tts voices and language code mapping
+    ttsVoices = {}
+    for line in open('language-tts-voice-mapping.txt', 'rt').readlines():
+        if len(line.strip().split(',')) == 3:
+            language, langCode, voiceName = line.strip().split(',')
+            ttsVoices[langCode.strip()] = voiceName.strip()
+    return asrmodel, conversation, ttsVoices
 
 
 # main voice chat app 
@@ -66,7 +72,7 @@ def app():
     st.subheader("It understands 97 Spoken Languages!")
 
     # get initial setup
-    asr, chatgpt = init_load_setups()
+    asr, chatgpt, ttsVoices = init_load_setups()
 
     # recorder 
     audio = audiorecorder("Push to Talk", "Recording... (push again to stop)")
@@ -87,6 +93,7 @@ def app():
         with st.spinner("Recognizing your voice command ..."):
             asr_result = asr.transcribe( audioname + recordFormat )
             text = asr_result["text"]
+            languageCode = asr_result["language"]
             st.markdown("<b>You:</b> " + text, unsafe_allow_html=True)
             print('ASR result is:' + text)
 
@@ -99,7 +106,7 @@ def app():
             spokenResponse = re.sub(r'\s+', ' ', response)
             spokenResponse = spokenResponse.lstrip().rstrip()
             #Speak the input text
-            generate_voice(spokenResponse, "Google US English")
+            generate_voice(spokenResponse, ttsVoices[languageCode])
 
 
 if __name__ == "__main__":
