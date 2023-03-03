@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # ChatGPT Voice Assistant Understanding 97 Languages
 
 This is a ChatGPT voice assistant web app that understands 97 different spoken languages. It is backed by the [awesome open sourced Whisper Automatic Speech Recogntion (ASR) model](https://github.com/openai/whisper) and the chatGTP Large Language Model (LLM), both provided by OpenAI. 
