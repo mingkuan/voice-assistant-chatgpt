@@ -1,4 +1,5 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![HitCount](https://hits.dwyl.com/mingkuan/voice-assistant-chatgpt.svg?style=flat-square&show=unique)](http://hits.dwyl.com/mingkuan/voice-assistant-chatgpt)
+
 
 # ChatGPT Voice Assistant Understanding 97 Languages
 
