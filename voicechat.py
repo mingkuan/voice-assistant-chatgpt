@@ -5,6 +5,9 @@ from audiorecorder import audiorecorder
 import magic
 import os
 import re
+from dotenv import load_dotenv
+
+
 
 # Define a function to generate TTS voices using the Web Speech API
 def generate_voice(text, voice):
@@ -49,11 +52,11 @@ class Conversation:
         return response.choices[0].text
 
 
-@st.cache  # Decorator to cache heavy setups
 def init_load_setups():
     # setup asr engine
     asrmodel = whisper.load_model('base', download_root='asrmodel' )
     # setup chatGPT instance
+    load_dotenv('.env') # the .env file has your openai api key
     openai.api_key = os.getenv("OPENAI_API_KEY").strip('"')
     conversation = Conversation(engine="text-davinci-003")
     # load tts voices and language code mapping

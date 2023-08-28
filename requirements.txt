@@ -1,4 +1,4 @@
-streamlit==1.15.0
+streamlit==1.26.0
 openai==0.26.5
 numpy==1.23.5
 torch==1.13.1
@@ -11,3 +11,4 @@ soundfile==0.11.0
 python-magic==0.4.27 
 pydub==0.25.1  
 streamlit-audiorecorder==0.0.2 
+python-dotenv==1.0.0
